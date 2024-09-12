@@ -26,3 +26,14 @@ export function createElement(name, props = {}, ...children) {
 
   return element;
 }
+
+// function getCompletion
+
+export function getCompletion(count) {
+  const lastInteger = count % 10;
+  const preLastInteger = Math.trunc(count / 10) % 10;
+  if ([2, 3, 4].indexOf(lastInteger) !== -1 && preLastInteger !== 1) {
+    return 'раза';
+  }
+  return 'pаз';
+}
